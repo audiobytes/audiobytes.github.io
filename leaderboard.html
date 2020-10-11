@@ -23,30 +23,66 @@
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="assets/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-    <script>
+    <script type="text/javascript" src="assets\data\result.js"></script>
+    <script type="text/javascript"> 
+      function load()
+      {
+        // var userdata = JSON.parse(info);
 
-        $(function() {
+        var div1 = document.getElementById('userinfo');
+        var div2 = document.getElementById('most-guessed-song')
+        var div3 = document.getElementById('first-guess-user')
 
+        var userdata = info["data"];
+        console.log("userrr");
+        for(var i = 0;i < userdata.length; i++)
+        {
+          div1.innerHTML = div1.innerHTML + "<tr>" 
+            + "<td>" + parseInt(i+1) + "</td>" 
+            + "<td>" + userdata[i][0] + "</td>" 
+            + "<td>" + userdata[i][1] + "</td>" 
+            + "<td>" + userdata[i][2] + "</td>" 
+            + "</tr>";
+        }
 
-      var people = [];
+        var mg = info["mostguessed"];
+        for(var i = 0;i < mg.length; i++)
+        {
+          div2.innerHTML = div2.innerHTML + "<tr>" 
+            + "<td>" + "<a href=" + "'"+ mg[i][2] + "' target='_blank '>" + mg[i][1] + "</a>" + "</td>" 
+            + "<td>" + mg[i][0] + "</td>" 
+            + "</tr>";
+        }
 
-      $.getJSON('assets\data\result.json', function(info) {
-          console.log(info);
-          $.each(info.data, function(i, f) {
-              var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f[0] + "</td>" +
-              "<td>" + f[1]+ "</td>" + "<td>" + f[2] + "</td>" + "</tr>"
-              $(tblRow).appendTo("#userdata tbody");
-        });
+        var fg = info["firstguess"];
+        for(var i=0; i<fg.length; i++)
+        {
+          var s = "";
+          for(var j=0; j < fg[i].length; j++)
+          {
+            console.log(fg[i][j]);
+            s = s+ "<tr>"
+              + "<td>" + fg[i][j][0] + "</td>"
+              + "<td>" + fg[i][j][1] + "</td>"
+              + "<td>" + fg[i][j][2] + "</td>"
+              + "</tr>";
+            }
+          console.log(s)
+            
+          console.log(div3.innerHTML)
+          div3.innerHTML = div3.innerHTML +
+          "<div class='table-wrapper'> <h2>Day " + parseInt(i+1) + "</h2>"
+          + "<table><thead><th>Song</th><th>First guess</th><th>Time Penalty (in minutes)</th></thead><tbody>"
+          + s + "</tbody></table></div><br>";
+        }
 
-      });
-
-    });
+      }
     </script>
   </head>
   
-  <body class="is-preload">
+  <body class="is-preload" onload="load()">
 		<div id="wrapper">
+
       <!-- Header -->
       <header id="header">
         <div class="inner">
@@ -56,31 +92,86 @@
               <span class="symbol"><img src="images/logo.jpg" alt="" /></span><span class="title">Guess the gnoS</span>
             </a>
 
+
+          <!-- Nav -->
+            <nav>
+              <ul>
+                <li><a href="#menu">Menu</a></li>
+              </ul>
+            </nav>
+
         </div>
       </header>
 
+      <!-- Menu -->
+			<nav id="menu">
+        <h2>Sections</h2>
+        <ul>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#most-guessed">Most Correctly Guessed Songs</a></li>
+          <li><a href="#first-guess">Daily First Guesses</a></li>
+        </ul>
+      </nav>
 
       <div id="main">
+
 				<div class="inner">
-          <h1>Leaderboard</h1>
-          <section>
+
+          <section id="leaderboard">
+            <h1>Leaderboard</h1>
             <div class="table-wrapper">
-              <table id= "userdata">
+              <table>
                 <thead>
                     <th>Serial number</th>
                     <th>Username</th>
                     <th>Correct Submissions</th>
-                    <th>Total time penalty</th>
+                    <th>Total time penalty (in minutes)</th>
                 </thead>
-                <tbody>
+                <tbody id= "userinfo">
           
                 </tbody>
               </table>
             </div>
           </section>
+          <br><br>
+          <section id="most-guessed">
+            <h1>Most Correctly Guessed Songs</h1>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                    <th>Song</th>
+                    <th>Correct Submissions</th>
+                </thead>
+                <tbody id= "most-guessed-song">
+          
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <br><br>
+
+          <section id="first-guess">
+            <h1>Daily First Guesses</h1>
+            <div id="first-guess-user">
+            </div>
+          </section>
+
         </div>
       </div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; Compiled by <a href="https://github.com/arundhati-b">Arundhati</a>. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+
     </div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

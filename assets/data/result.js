@@ -1,3 +1,4 @@
+info =
 {
   "columns": [
     "username",
@@ -433,5 +434,46 @@
       1,
       1422.0
     ]
+  ],
+  "mostguessed": [
+    [49, 'Udd Gaye', 'https://open.spotify.com/track/6wZJsut8fjiWiMPaccRAOX?si=tOJtUuJhQAufCiLXAAHSlg'], 
+    [44, 'Blinding Lights', 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=wDzSPd7kSSqlg-72rXsCUA'], 
+    [23, '7 Rings','https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF?si=OoWXjDAqRLSUskJWMcQXEg'], 
+    [20, 'Never Gonna Give You Up', 'https://open.spotify.com/track/4uLU6hMCjMI75M1A2tKUQC?si=s3h5duxPRUCBslBWqdcnCA'], 
+    [19, 'Mitwa', 'https://open.spotify.com/track/4BTPzhEsyW3blWcxcuhLM0?si=sgCSxQHGQiSwRzt5qfclkQ'], 
+    [15, 'Hotel California', 'https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv?si=ZJuA8bI2SrqieD25sz-Ung'], 
+    [15, 'Bohemian Rhapsody', 'https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv?si=cOvER11FQh-HLW1oljHmNQ'], 
+    [14, 'Roxanne', 'https://open.spotify.com/track/696DnlkuDOXcMAnKlTgXXK?si=HIqZjQBnSDChARAVEGebYg'], 
+    [12, 'Tune Kaha', 'https://open.spotify.com/track/1gWtHDe403RuyZqhvSRcv8?si=KFy4S07QTNGfwbhVZxbjkA'], 
+    [12, 'Say So', 'https://open.spotify.com/track/3Dv1eDb0MEgF93GpLXlucZ?si=VWF-OOCCQcq5ocZi7qDtfw'], 
+    [11, 'Dynamite', 'https://open.spotify.com/track/0t1kP63rueHleOhQkYSXFY?si=sLILa9UOSQiZHJelwfT4Pw'], 
+    [9, 'Dance Monkey', 'https://open.spotify.com/track/2XU0oxnq2qxCpomAAuJY8K?si=zbCcQedOSQaqu3U5iYnWGw'], 
+    [9, 'Baar Baar Dekho', 'https://open.spotify.com/track/34kav8CJjcM52QVsOPGioz?si=iGBoEdaPS-u_pcwrwX13rg'], 
+    [7, 'Wish You Were Here', 'https://open.spotify.com/track/6mFkJmJqdDVQ1REhVfGgd1?si=FfeQ2v_8QV-l3JHXp5Ex6g'], 
+    [5, 'In My Feelings', 'https://open.spotify.com/track/2G7V7zsVDxg1yRsu7Ew9RJ?si=SwpfnF0nR3uhOqqVdTj9NQ']
+  ],
+  "firstguess" : [
+    [
+      ['Udd Gaye', 'the.nuclear.coffee.cup', 13.0],
+      ['Blinding Lights', 'sharma_raghav17', 5.0],
+      ['Hotel California', 'red_is_one', 13.0]],
+    [
+      ['Dynamite', 'nikki_tikki19', 21.0],
+      ['Roxanne', 'shivangixdhiman', 40.0],
+      ['Wish You Were Here', 'red_is_one', 7.0]],
+    [
+      ['Bohemian Rhapsody', 'metalhead_ayush_', 1.0],
+      ['Baar Baar Dekho', 'red_is_one', 40.0],
+      ['Say So', 'pankil24', 15.0]],
+    [
+      ['In My Feelings', 'shivangixdhiman', 339.0],
+      ['Never Gonna Give You Up', 'sidhant__s', 4.0],
+      ['Dance Monkey', 'makch16', 1.0]],
+    [
+      ['Tune Kaha', 'red_is_one', 10.0],
+      ['7 Rings', 'red_is_one', 7.0],
+      ['Mitwa', 'half.curry', 3.0]
+    ]
   ]
 }
+
